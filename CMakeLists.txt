@@ -22,3 +22,7 @@ include_directories(software/include)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/run/parameters.dat ${CMAKE_BINARY_DIR} COPYONLY)
 
+install(TARGETS msu_sampler msu_sampler_shared
+        RUNTIME DESTINATION ${CMAKE_HOME_DIRECTORY}
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib/static)
